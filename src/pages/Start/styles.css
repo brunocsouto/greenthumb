@@ -1,0 +1,118 @@
+html, body {
+    height: 100%;
+    width:100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.logo {grid-area: logo;}
+.main {grid-area: main;}
+.image {grid-area: image;}
+    
+@media only screen and (min-width: 961px){
+    .window {
+        background-image: url('../../assets/illustrations/illustration-home.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position-x: 80%;
+    }
+
+    .parent {
+        display: grid;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        grid-template-areas: 
+            'logo image'
+            'main image';
+        grid-template-columns: 350px repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-rows: 100px 1fr;
+        height: 700px;
+        object-fit: cover;
+        grid-gap: .5rem;
+        align-items: flex-start;
+    }
+    
+    .image {
+        visibility: hidden;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    .parent {
+        display: grid;
+        grid-template-areas: 
+            'logo'
+            'main'
+            'image';
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-rows: 100px 1fr;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .btnStart {
+        display: block;
+        margin: auto;
+    }
+    
+    .title {
+        text-align: center;
+        font-size-adjust: inherit;
+    }
+
+    .image {
+        width: 700px;
+        height: 550px;
+        visibility: hidden;
+    }
+
+    
+    .window {
+        background-image: url('../../assets/illustrations/illustration-home-mobile.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 450px;
+        background-position-x: 50%;
+    }
+}
+
+.logo {
+    max-width: 200px;
+    align-self: center;
+}
+
+.container {
+    display: block;
+    max-width: 80%;
+    margin:auto;
+}
+
+
+
+.title {
+    font-size: 60px;
+    color: #000;
+}
+
+.btnStart {
+    width: 170px;
+    height: 50px;
+    color: #FFFFFF;
+    border-radius: 25px;
+    border: 2px solid #15573F;
+    background-color: #15573F;
+    font-size: 16px;
+    padding: 0 20px 0 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.arrow {
+    float: left;
+    stroke: #FFFFFF;
+}
