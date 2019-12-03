@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/greenthumb/static/css/main.f026c47d.chunk.css",
+    "main.css": "/greenthumb/static/css/main.abdb6915.chunk.css",
     "main.js": "/greenthumb/static/js/main.592db255.chunk.js",
     "main.js.map": "/greenthumb/static/js/main.592db255.chunk.js.map",
     "runtime-main.js": "/greenthumb/static/js/runtime-main.daa4d83f.js",
@@ -8,9 +8,9 @@
     "static/js/2.ee8df2f8.chunk.js": "/greenthumb/static/js/2.ee8df2f8.chunk.js",
     "static/js/2.ee8df2f8.chunk.js.map": "/greenthumb/static/js/2.ee8df2f8.chunk.js.map",
     "index.html": "/greenthumb/index.html",
-    "precache-manifest.6ef8ea75aa83a4825673abfc80a53550.js": "/greenthumb/precache-manifest.6ef8ea75aa83a4825673abfc80a53550.js",
+    "precache-manifest.ba1b40b987f01b12e60ed4cf1cc216ee.js": "/greenthumb/precache-manifest.ba1b40b987f01b12e60ed4cf1cc216ee.js",
     "service-worker.js": "/greenthumb/service-worker.js",
-    "static/css/main.f026c47d.chunk.css.map": "/greenthumb/static/css/main.f026c47d.chunk.css.map",
+    "static/css/main.abdb6915.chunk.css.map": "/greenthumb/static/css/main.abdb6915.chunk.css.map",
     "static/media/arrow.2783f801.svg": "/greenthumb/static/media/arrow.2783f801.svg",
     "static/media/arrow.7de066f3.svg": "/greenthumb/static/media/arrow.7de066f3.svg",
     "static/media/styles.css": "/greenthumb/static/media/illustration-home.b2c10a67.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.daa4d83f.js",
     "static/js/2.ee8df2f8.chunk.js",
-    "static/css/main.f026c47d.chunk.css",
+    "static/css/main.abdb6915.chunk.css",
     "static/js/main.592db255.chunk.js"
   ]
 }
