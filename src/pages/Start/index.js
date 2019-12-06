@@ -22,7 +22,7 @@ class Start extends Component {
                         <Logo className="logo" />
                         <div className="main">
                             <h1 className="title">Find your next green friend</h1>
-                            <Link to="/plants">
+                            <Link to="/quiz">
                                 <button className="btnStart">
                                     <ArrowIcon className="arrow" stroke="#FFF"/>
                                     start quizz

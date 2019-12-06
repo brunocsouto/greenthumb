@@ -1,7 +1,3 @@
-body {
-    overflow: hidden;
-}
-
 .logo {grid-area: logo;}
 .main {grid-area: main;}
 .image {grid-area: image;}

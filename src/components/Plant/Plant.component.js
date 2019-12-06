@@ -1,25 +1,84 @@
 import React from 'react';
-import { StyledContainer, Image, Name, Price, FilterIcons, DetailsLine } from './Plant.styles';
+import './styles.css';
+
+import { Link } from 'react-router-dom';
+
+import { StyledContainer, Image, Name, Price, DetailsLine, IconsBox, Icon } from './Plant.styles';
 import { ReactComponent as ToxicIcon } from '../../assets/icons/grey/toxic.svg';
+import { ReactComponent as HighSunIcon } from '../../assets/icons/grey/high-sun.svg';
+import { ReactComponent as LowSunIcon } from '../../assets/icons/grey/low-sun.svg';
+import { ReactComponent as OneWaterIcon } from '../../assets/icons/grey/one-drop.svg';
+import { ReactComponent as TwoWaterIcon } from '../../assets/icons/grey/two-drops.svg';
+import { ReactComponent as ThreeWaterIcon } from '../../assets/icons/grey/three-drops.svg';
+import { ReactComponent as NoIcon } from '../../assets/icons/grey/no-answer.svg';
 
 import ButtonContainer from '../Button/Button.container';
 
 const PlantComponent = ({props}) => {
+    const path = `/purchase/${props.id}`;
     return (
         <StyledContainer>
             <Image src={props.url} />
             <Name>{props.name}</Name>
             <DetailsLine>
                 <Price>${props.price}</Price>
-                <FilterIcons>
-                    <ToxicIcon />
-                    <ToxicIcon />
-                    <ToxicIcon />
-                </FilterIcons>
+                <IconsBox>
+                    <FilterIcons props={props} />
+                </IconsBox>
             </DetailsLine>
-            <ButtonContainer />
+                <Link to={path} >
+                    <ButtonContainer />
+                </Link>
         </StyledContainer>
     )
 }
 
 export default PlantComponent;
+
+const FilterIcons = ({props}) => { 
+    console.log(props)
+    const imgToxic = props.toxicity ? <Icon><ToxicIcon /></Icon> : <></>;
+    let imgSun = '';
+    switch(props.sun){
+        case 'high':{
+            imgSun = <Icon><HighSunIcon /></Icon>;
+            break;
+        }
+        case 'low':{
+            imgSun = <Icon><LowSunIcon /></Icon>;
+            break;
+        }
+        default: {
+            imgSun = <Icon><NoIcon /></Icon>;
+            break;
+        }
+    }
+
+    let imgWater = '';
+    switch(props.water){
+        case 'daily':{
+            imgWater = <Icon><ThreeWaterIcon /></Icon>;
+            break;
+        }
+        case 'regularly':{
+            imgWater = <Icon><TwoWaterIcon /></Icon>;
+            break;
+        }
+        case 'rarely':{
+            imgWater = <Icon><OneWaterIcon /></Icon>;
+            break;
+        }
+        default:{
+            imgWater = <Icon><OneWaterIcon /></Icon>;
+            break;
+        }
+    }
+
+    return (
+        <>
+            {imgWater}
+            {imgSun}
+            {imgToxic}
+        </>
+    );
+};

@@ -33,8 +33,14 @@ const DetailsLine = styled.h2`
     margin:20px 0 20px 0;
 `;
 
-const FilterIcons = styled.span`
+const IconsBox = styled.span`
+    float:right;
+`;
+
+const Icon = styled.div`
+    padding-left: 10px;
     float: right;
 `;
 
-export { StyledContainer, Image, Name, Price, FilterIcons, DetailsLine };
+
+export { StyledContainer, Image, Name, Price, DetailsLine, IconsBox, Icon };
