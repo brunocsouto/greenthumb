@@ -60,6 +60,13 @@ button {
     font-size: 0.9rem;
 }
 
+
+
+
+.option-water:hover{
+    background-color: #7BAF9E !important;
+}
+
 @media (min-width:801px) {
     body {
         overflow: hidden;
