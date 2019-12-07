@@ -9,12 +9,11 @@ class ButtonContainer extends Component {
             label: "",
             fill: false,
             to: "",
-            // params
         }
     }
 
     componentDidMount(){
-        const label = "next";
+        const label = "buy now";
         this.setState({label});
     }
 

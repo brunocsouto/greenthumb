@@ -5,7 +5,6 @@ import { ReactComponent as ArrowIcon } from '../../assets/icons/green/arrow.svg'
 const ButtonComponent = ({props}) => {
     return(
         <Button>
-            <Arrow><ArrowIcon /></Arrow>
             {props.label}
         </Button>
     );

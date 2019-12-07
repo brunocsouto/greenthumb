@@ -1,4 +1,5 @@
 .container-results {
+    margin: auto;
     width: 100%;
     width:100vw;
     display: grid;
@@ -12,11 +13,25 @@
 
 .main {
     grid-area: main;
-    padding-top: 2rem;
 }
+
+.main-results img {
+    padding-top:1rem;
+}
+
+.main-results h1 {
+    padding:1rem;
+}
+
 .plants {
     grid-area: plants;
-    margin: auto;
+}
+
+.plant-group{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 100vw;
 }
 
 h1{

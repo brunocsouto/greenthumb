@@ -37,9 +37,9 @@ export default class results extends Component {
         const { plants } = this.state;
 
         const renderPlants = (
-            <div>
+            <section className="plant-group">
                 <Plants plants={plants} />
-            </div>
+            </section>
         )
 
         return (
@@ -49,8 +49,8 @@ export default class results extends Component {
                         <Logo className="logo-image" />
                     </div>
                 </Link>
-                <div className="main">
-                    <img src="/assets/illustrations/pick.png" alt="Pick" />
+                <div className="main main-results">
+                    <img src="./assets/illustrations/pick.png" alt="Pick" />
                     <h1>Our picks for you</h1>
                 </div>
                 <div className="plants">{renderPlants}</div>

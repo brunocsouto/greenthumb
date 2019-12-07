@@ -6,12 +6,16 @@ const { normal } = thickness;
 
 const StyledContainer = styled.div`
     background-color: ${white};
-    padding: 3rem; 
+    padding: 2rem; 
     padding-top: 0;
-    width: 70vw;
-    max-width: 30rem;
+    width: 60vw;
+    max-width: 20rem;
     border-radius: 5px;
     margin:1rem;
+    display: inline-block;
+    -webkit-box-shadow: 6px 17px 31px -20px rgba(0,0,0,0.56);
+    -moz-box-shadow: 6px 17px 31px -20px rgba(0,0,0,0.56);
+    box-shadow: 6px 17px 31px -20px rgba(0,0,0,0.56);
 `;
 
 const Image = styled.img`
@@ -22,6 +26,7 @@ const Image = styled.img`
 const Name = styled.h2`
     margin: 0px;
     font-weight: bold;
+    font-size: 1.4rem;
     color: #15573F;
 `;
 

@@ -1,16 +1,18 @@
 import styled from 'styled-components';
-import { colors } from '../../utils/styles/helpers';
+import { colors, thickness } from '../../utils/styles/helpers';
 
 const { green, white } = colors;
+const { thin } = thickness;
 
 const Button = styled.button`
     height: 50px;
     width: 100%;
-    color: ${green};
+    color: ${white};
     border-radius: 25px;
     border: 2px solid ${green};
-    background-color: transparent;
+    background-color: ${green};
     font-size: 18px;
+    font-weight: ${thin};
     padding: 0 30px 0 30px;
 
     &:hover {
