@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e328d1377510d996fec8e40a18a093ba",
+    "revision": "409f40f7a47dc6222a4352c2905a5605",
     "url": "/greenthumb/index.html"
   },
   {
-    "revision": "e60c673a9712a7265fee",
-    "url": "/greenthumb/static/css/main.38fb2090.chunk.css"
+    "revision": "6442783ea8e784605b51",
+    "url": "/greenthumb/static/css/main.3354b433.chunk.css"
   },
   {
-    "revision": "a94cd53709c0809ca6be",
-    "url": "/greenthumb/static/js/2.5ef2dfef.chunk.js"
+    "revision": "6faccb04db78d0fe2195",
+    "url": "/greenthumb/static/js/2.6b265e6c.chunk.js"
   },
   {
-    "revision": "e60c673a9712a7265fee",
-    "url": "/greenthumb/static/js/main.5c666a30.chunk.js"
+    "revision": "7eb906b2d8ef627da08d7f4a543e6732",
+    "url": "/greenthumb/static/js/2.6b265e6c.chunk.js.LICENSE"
   },
   {
-    "revision": "9d784ce384743b5bd1cc",
-    "url": "/greenthumb/static/js/runtime-main.daa4d83f.js"
+    "revision": "6442783ea8e784605b51",
+    "url": "/greenthumb/static/js/main.ba63883f.chunk.js"
+  },
+  {
+    "revision": "cf5e75e2ef1be1699fc7",
+    "url": "/greenthumb/static/js/runtime-main.d776a3ea.js"
   },
   {
     "revision": "2783f801112d144bc540559ffdff84cd",

@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/greenthumb/static/css/main.38fb2090.chunk.css",
-    "main.js": "/greenthumb/static/js/main.5c666a30.chunk.js",
-    "main.js.map": "/greenthumb/static/js/main.5c666a30.chunk.js.map",
-    "runtime-main.js": "/greenthumb/static/js/runtime-main.daa4d83f.js",
-    "runtime-main.js.map": "/greenthumb/static/js/runtime-main.daa4d83f.js.map",
-    "static/js/2.5ef2dfef.chunk.js": "/greenthumb/static/js/2.5ef2dfef.chunk.js",
-    "static/js/2.5ef2dfef.chunk.js.map": "/greenthumb/static/js/2.5ef2dfef.chunk.js.map",
+    "main.css": "/greenthumb/static/css/main.3354b433.chunk.css",
+    "main.js": "/greenthumb/static/js/main.ba63883f.chunk.js",
+    "main.js.map": "/greenthumb/static/js/main.ba63883f.chunk.js.map",
+    "runtime-main.js": "/greenthumb/static/js/runtime-main.d776a3ea.js",
+    "runtime-main.js.map": "/greenthumb/static/js/runtime-main.d776a3ea.js.map",
+    "static/js/2.6b265e6c.chunk.js": "/greenthumb/static/js/2.6b265e6c.chunk.js",
+    "static/js/2.6b265e6c.chunk.js.map": "/greenthumb/static/js/2.6b265e6c.chunk.js.map",
     "index.html": "/greenthumb/index.html",
-    "precache-manifest.c8d0ec562badd6382ecfc82a38df2415.js": "/greenthumb/precache-manifest.c8d0ec562badd6382ecfc82a38df2415.js",
+    "precache-manifest.6c4f4c786de18944b5d866739bda3a5d.js": "/greenthumb/precache-manifest.6c4f4c786de18944b5d866739bda3a5d.js",
     "service-worker.js": "/greenthumb/service-worker.js",
-    "static/css/main.38fb2090.chunk.css.map": "/greenthumb/static/css/main.38fb2090.chunk.css.map",
+    "static/css/main.3354b433.chunk.css.map": "/greenthumb/static/css/main.3354b433.chunk.css.map",
+    "static/js/2.6b265e6c.chunk.js.LICENSE": "/greenthumb/static/js/2.6b265e6c.chunk.js.LICENSE",
     "static/media/arrow.2783f801.svg": "/greenthumb/static/media/arrow.2783f801.svg",
     "static/media/arrow.7de066f3.svg": "/greenthumb/static/media/arrow.7de066f3.svg",
     "static/media/high-sun.ffabbf0e.svg": "/greenthumb/static/media/high-sun.ffabbf0e.svg",
@@ -23,9 +24,9 @@
     "static/media/two-drops.268fdabd.svg": "/greenthumb/static/media/two-drops.268fdabd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.daa4d83f.js",
-    "static/js/2.5ef2dfef.chunk.js",
-    "static/css/main.38fb2090.chunk.css",
-    "static/js/main.5c666a30.chunk.js"
+    "static/js/runtime-main.d776a3ea.js",
+    "static/js/2.6b265e6c.chunk.js",
+    "static/css/main.3354b433.chunk.css",
+    "static/js/main.ba63883f.chunk.js"
   ]
 }
