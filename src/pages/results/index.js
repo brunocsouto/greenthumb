@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import queryString from 'query-string';
-import PlantComponent from '../../components/Plant/Plant.component'
+import PlantComponent from '../../components/Plant/Plant.component';
+
+import './styles.css';
+import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
 
 export default class results extends Component {
     constructor() {
@@ -33,16 +37,23 @@ export default class results extends Component {
         const { plants } = this.state;
 
         const renderPlants = (
-            <div className="plants">
+            <div>
                 <Plants plants={plants} />
             </div>
         )
 
         return (
-            <div>
-                <img src="/assets/illustrations/pick.png" alt="Pick" />
-                <h1>Our picks for you</h1>
-                <div>{renderPlants}</div>
+            <div className="container-results">
+                <Link className="btn-home" to="/">
+                    <div className="logo">
+                        <Logo className="logo-image" />
+                    </div>
+                </Link>
+                <div className="main">
+                    <img src="/assets/illustrations/pick.png" alt="Pick" />
+                    <h1>Our picks for you</h1>
+                </div>
+                <div className="plants">{renderPlants}</div>
             </div>
         )
     }

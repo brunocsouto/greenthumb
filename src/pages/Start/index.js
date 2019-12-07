@@ -9,12 +9,8 @@ import { Link } from 'react-router-dom';
 
 
 class Start extends Component {
-
-    startQuiz(){
-        console.log("foi");
-    }
-
     render(){
+        document.title = "Start quizz - green thumb.";
         return (
             <div className="container">
                 <div className="logo">
@@ -30,8 +26,8 @@ class Start extends Component {
                 </Link>
                 </div>
                 <div className="image">
-                    <img className="main-image-mobile" src="/assets/illustrations/illustration-home-mobile.png" alt="green thumb" />
-                    <img className="main-image" src="/assets/illustrations/illustration-home.png" alt="green thumb" />
+                    <img className="main-image-mobile" src={process.env.PUBLIC_URL + "/assets/illustrations/illustration-home-mobile.png"} alt="green thumb" />
+                    <img className="main-image" src={process.env.PUBLIC_URL + "/assets/illustrations/illustration-home.png"} alt="green thumb" />
                 </div>
             </div>
         )

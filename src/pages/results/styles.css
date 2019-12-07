@@ -1,0 +1,26 @@
+.container-results {
+    width: 100%;
+    width:100vw;
+    display: grid;
+    grid-template-areas:
+        'logo'
+        'main'
+        'plants';
+}
+
+.logo {grid-area: logo;}
+
+.main {
+    grid-area: main;
+    padding-top: 2rem;
+}
+.plants {
+    grid-area: plants;
+    margin: auto;
+}
+
+h1{
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 800;
+}

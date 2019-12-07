@@ -17,7 +17,7 @@ import ButtonContainer from '../Button/Button.container';
 const PlantComponent = ({props}) => {
     const path = `/purchase/${props.id}`;
     return (
-        <StyledContainer>
+        <StyledContainer className="plant-container">
             <Image src={props.url} />
             <Name>{props.name}</Name>
             <DetailsLine>
@@ -36,7 +36,6 @@ const PlantComponent = ({props}) => {
 export default PlantComponent;
 
 const FilterIcons = ({props}) => { 
-    console.log(props)
     const imgToxic = props.toxicity ? <Icon><ToxicIcon /></Icon> : <></>;
     let imgSun = '';
     switch(props.sun){

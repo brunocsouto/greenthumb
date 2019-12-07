@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.css'
 
 import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
 
 
 export default class Quiz extends Component {
@@ -14,9 +15,9 @@ export default class Quiz extends Component {
                     index: 1,
                     img: './assets/illustrations/sun.png',
                     options: [
-                        'high',
-                        'low',
-                        'no'
+                        { value:'high', label: 'High Sunlight'},
+                        { value:'low', label: 'Low Sunlight'},
+                        { value:'no', label: 'No Sunlight'},
                     ],
                     selected: ''
                 },
@@ -25,9 +26,9 @@ export default class Quiz extends Component {
                     index: 2,
                     img: './assets/illustrations/wateringcan.png',
                     options: [
-                        'daily',
-                        'regularly',
-                        'rarely'
+                        { value:'daily', label: 'Rarely'},
+                        { value:'regularly', label: 'Regularly'},
+                        { value:'rarely', label: 'Daily'},
                     ],
                     selected: ''
                 },
@@ -36,8 +37,8 @@ export default class Quiz extends Component {
                     index: 3,
                     img:'./assets/illustrations/dog.png',
                     options: [
-                        'true',
-                        'false'
+                        { value:'true', label: 'Yes'},
+                        { value:'false', label: "No/They don't care"},
                     ],
                     selected: ''
                 }
@@ -108,37 +109,37 @@ export default class Quiz extends Component {
         switch(current){
             case 1: {
                 return (
-                    <>
-                    <Link to="/">
-                        <div className="optionButton buttonPrev" >
-                            home
+                    <div className="navigation">
+                        <div 
+                            className="optionButton buttonNext"
+                            onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
+                        >
+                            next
                         </div>
-                    </Link>
-                    <div 
-                        className="optionButton buttonNext"
-                        onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
-                    >
-                        next
+                        <Link to="/">
+                            <div className="optionButton buttonPrev" >
+                                home
+                            </div>
+                        </Link>
                     </div>
-                    </>
                 );
             }
             case 2: {
                 return (
-                    <>
-                    <div 
-                        className="optionButton buttonPrev"
-                        onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
-                    >
-                        prev
+                    <div className="navigation">
+                        <div 
+                            className="optionButton buttonNext"
+                            onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
+                        >
+                            next
+                        </div>
+                        <div 
+                            className="optionButton buttonPrev"
+                            onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
+                        >
+                            prev
+                        </div>
                     </div>
-                    <div 
-                        className="optionButton buttonNext"
-                        onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
-                    >
-                        next
-                    </div>
-                    </>
                 );
             }
             case 3: {
@@ -148,39 +149,39 @@ export default class Quiz extends Component {
                     path += `?sun=${questions[1].selected}&water=${questions[2].selected}&pets=${questions[3].selected}`;
                 }
                 return (
-                    <>
-                    <div 
-                        className="optionButton buttonPrev"
-                        onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
-                    >
-                        prev
-                    </div>
-                    <Link to={path}>
+                    <div className="navigation">
+                        <Link to={path}>
+                            <div 
+                                className="optionButton buttonNext"
+                                onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
+                            >
+                                finish
+                            </div>
+                        </Link>
                         <div 
-                            className="optionButton buttonNext"
-                            onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
+                            className="optionButton buttonPrev"
+                            onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
                         >
-                            finish
+                            prev
                         </div>
-                    </Link>
-                    </>
+                    </div>
                 );
             }
             default: {
                 return (
-                    <>
-                    <Link to="/">
-                        <div className="optionButton buttonPrev" >
-                            home
+                    <div className="navigation">
+                        <Link to="/">
+                            <div className="optionButton buttonPrev" >
+                                home
+                            </div>
+                        </Link>
+                        <div 
+                            className="optionButton buttonNext"
+                            onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
+                        >
+                            next
                         </div>
-                    </Link>
-                    <div 
-                        className="optionButton buttonNext"
-                        onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
-                    >
-                        next
                     </div>
-                    </>
                 );
             }
         }
@@ -191,7 +192,7 @@ export default class Quiz extends Component {
         switch(current){
             case 1:{
                 return (
-                    <div>
+                    <div className="main">
                         <img src={questions[current].img} alt={questions[current].id} />
                         <h2>First set the amount of <b>sunlight</b> your plant will get.</h2>
                     </div>
@@ -200,7 +201,7 @@ export default class Quiz extends Component {
             }
             case 2:{
                 return (
-                    <div>
+                    <div className="main">
                         <img src={questions[current].img} alt={questions[current].id} />
                         <h2>How often do you want to <b>water</b> your plant?</h2>
                     </div>
@@ -209,7 +210,7 @@ export default class Quiz extends Component {
             }
             default: {
                 return (
-                    <div>
+                    <div className="main">
                         <img src={questions[current].img} alt={questions[current].id} />
                         <h2>Do you have pets? Do they <b>chew</b> plants?</h2>
                         <p>We are asking because some plants can be <b>toxic</b> for your buddy.</p>
@@ -223,6 +224,7 @@ export default class Quiz extends Component {
 
     
     render() {
+        document.title = "Quiz - green thumb.";
         const { questions, current } = this.state;
         const question = questions[current];
         const renderQuestions =  (
@@ -237,7 +239,12 @@ export default class Quiz extends Component {
         )
 
         return (
-            <div id="questionBlock" className="questionBlock">
+            <div className="containerQuiz">
+                <Link className="btn-home" to="/">
+                    <div className="logo">
+                        <Logo className="logo-image" />
+                    </div>
+                </Link>
                 {this.renderIntroduction()}
                 {renderQuestions}
                 {this.renderButtons()}
@@ -251,22 +258,24 @@ const Question = ({ handleOptionChange, question }) => {
     return(
         <>
         {options.map((option, index) => (
-            <Option 
-                label={option} 
-                selected={selected}
-                handleOptionChange= { 
-                    handleOptionChange
-                }
-                key={`${option}_${index}`} 
-            />
+            <div className="options" key={`${option.value}_${index}`} >
+                <Option 
+                    label={option.label}
+                    value={option.value} 
+                    selected={selected}
+                    handleOptionChange= { 
+                        handleOptionChange
+                    }
+                />
+            </div>
         ))}
         </>
     )
 }
 
-const Option = ({ handleOptionChange, label, selected }) => {
-    const classNameSelected = (selected === label) ? "optionButton selected": "optionButton" ;
+const Option = ({ handleOptionChange, label, selected, value }) => {
+    const classNameSelected = (selected === value) ? "optionButton selected": "optionButton" ;
     return(
-        <div className={classNameSelected} onClick={handleOptionChange.bind(this, label)}>{label}</div>
+        <div className={classNameSelected} onClick={handleOptionChange.bind(this, value)}>{label}</div>
     )
 }

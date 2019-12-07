@@ -6,15 +6,15 @@ const { normal } = thickness;
 
 const StyledContainer = styled.div`
     background-color: ${white};
-    padding: 40px; 
+    padding: 3rem; 
     padding-top: 0;
-    width: 280px;
+    width: 70vw;
+    max-width: 30rem;
     border-radius: 5px;
-    margin:35px
+    margin:1rem;
 `;
 
 const Image = styled.img`
-    max-width: 100%;
     display: block;
     margin: 0 auto -10px auto;
 `;
@@ -22,6 +22,7 @@ const Image = styled.img`
 const Name = styled.h2`
     margin: 0px;
     font-weight: bold;
+    color: #15573F;
 `;
 
 const Price = styled.span`
