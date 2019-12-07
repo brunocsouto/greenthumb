@@ -185,14 +185,48 @@ export default class Quiz extends Component {
             }
         }
     }
+
+    renderIntroduction = () => {
+        const { questions, current } = this.state;
+        switch(current){
+            case 1:{
+                return (
+                    <div>
+                        <img src={questions[current].img} alt={questions[current].id} />
+                        <h2>First set the amount of <b>sunlight</b> your plant will get.</h2>
+                    </div>
+                );
+                break;
+            }
+            case 2:{
+                return (
+                    <div>
+                        <img src={questions[current].img} alt={questions[current].id} />
+                        <h2>How often do you want to <b>water</b> your plant?</h2>
+                    </div>
+                );
+                break;
+            }
+            default: {
+                return (
+                    <div>
+                        <img src={questions[current].img} alt={questions[current].id} />
+                        <h2>Do you have pets? Do they <b>chew</b> plants?</h2>
+                        <p>We are asking because some plants can be <b>toxic</b> for your buddy.</p>
+                    </div>
+                );
+                break;
+            }
+        }
+    }
+
+
     
     render() {
         const { questions, current } = this.state;
         const question = questions[current];
         const renderQuestions =  (
             <div className="question">
-                <h2>{question.id}</h2>
-                <img src={question.img} alt={question.id} />
                 <Question 
                     question={question} 
                     handleOptionChange= {
@@ -204,8 +238,7 @@ export default class Quiz extends Component {
 
         return (
             <div id="questionBlock" className="questionBlock">
-                <h1>Quiz</h1>
-                <p>{JSON.stringify(this.state)}</p>
+                {this.renderIntroduction()}
                 {renderQuestions}
                 {this.renderButtons()}
             </div>

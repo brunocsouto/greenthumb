@@ -41,15 +41,15 @@ const FilterIcons = ({props}) => {
     let imgSun = '';
     switch(props.sun){
         case 'high':{
-            imgSun = <Icon><HighSunIcon /></Icon>;
+            imgSun = <Icon><HighSunIcon className="iconPlantList" /></Icon>;
             break;
         }
         case 'low':{
-            imgSun = <Icon><LowSunIcon /></Icon>;
+            imgSun = <Icon><LowSunIcon className="iconPlantList" /></Icon>;
             break;
         }
         default: {
-            imgSun = <Icon><NoIcon /></Icon>;
+            imgSun = <Icon><NoIcon className="iconPlantList" /></Icon>;
             break;
         }
     }
@@ -57,19 +57,19 @@ const FilterIcons = ({props}) => {
     let imgWater = '';
     switch(props.water){
         case 'daily':{
-            imgWater = <Icon><ThreeWaterIcon /></Icon>;
+            imgWater = <Icon><ThreeWaterIcon className="iconPlantList" /></Icon>;
             break;
         }
         case 'regularly':{
-            imgWater = <Icon><TwoWaterIcon /></Icon>;
+            imgWater = <Icon><TwoWaterIcon className="iconPlantList" /></Icon>;
             break;
         }
         case 'rarely':{
-            imgWater = <Icon><OneWaterIcon /></Icon>;
+            imgWater = <Icon><OneWaterIcon className="iconPlantList" /></Icon>;
             break;
         }
         default:{
-            imgWater = <Icon><OneWaterIcon /></Icon>;
+            imgWater = <Icon><OneWaterIcon className="iconPlantList" /></Icon>;
             break;
         }
     }

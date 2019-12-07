@@ -40,7 +40,8 @@ export default class results extends Component {
 
         return (
             <div>
-                <h1>Result</h1>
+                <img src="/assets/illustrations/pick.png" alt="Pick" />
+                <h1>Our picks for you</h1>
                 <div>{renderPlants}</div>
             </div>
         )

@@ -16,21 +16,22 @@ class Start extends Component {
 
     render(){
         return (
-            <div className="window">
-                <div className="container">
-                    <div className="parent">
-                        <Logo className="logo" />
-                        <div className="main">
-                            <h1 className="title">Find your next green friend</h1>
-                            <Link to="/quiz">
-                                <button className="btnStart">
-                                    <ArrowIcon className="arrow" stroke="#FFF"/>
-                                    start quizz
-                                </button>
-                            </Link>
-                        </div>
-                        <div className="image" />
-                    </div>
+            <div className="container">
+                <div className="logo">
+                    <Logo className="logo-image" />
+                </div>
+                <div className="main">
+                    <h1 className="title">Find your next green friend</h1>
+                    <Link to="/quiz">
+                        <button id="btn-start">
+                            <ArrowIcon className="arrow" stroke="#FFF"/>
+                            <div className="label-button">start quizz</div>
+                        </button>
+                </Link>
+                </div>
+                <div className="image">
+                    <img className="main-image-mobile" src="/assets/illustrations/illustration-home-mobile.png" alt="green thumb" />
+                    <img className="main-image" src="/assets/illustrations/illustration-home.png" alt="green thumb" />
                 </div>
             </div>
         )
