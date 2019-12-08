@@ -197,7 +197,6 @@ export default class Quiz extends Component {
                         <h2>First set the amount of <b>sunlight</b> your plant will get.</h2>
                     </div>
                 );
-                break;
             }
             case 2:{
                 return (
@@ -206,7 +205,6 @@ export default class Quiz extends Component {
                         <h2>How often do you want to <b>water</b> your plant?</h2>
                     </div>
                 );
-                break;
             }
             default: {
                 return (
@@ -216,7 +214,6 @@ export default class Quiz extends Component {
                         <p>We are asking because some plants can be <b>toxic</b> for your buddy.</p>
                     </div>
                 );
-                break;
             }
         }
     }

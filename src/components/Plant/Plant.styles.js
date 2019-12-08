@@ -8,10 +8,10 @@ const StyledContainer = styled.div`
     background-color: ${white};
     padding: 2rem; 
     padding-top: 0;
-    width: 60vw;
-    max-width: 20rem;
+    width: 13vw;
+    min-width: 11rem;
     border-radius: 5px;
-    margin:1rem;
+    margin:0.7rem;
     display: inline-block;
     -webkit-box-shadow: 6px 17px 31px -20px rgba(0,0,0,0.56);
     -moz-box-shadow: 6px 17px 31px -20px rgba(0,0,0,0.56);
@@ -19,14 +19,17 @@ const StyledContainer = styled.div`
 `;
 
 const Image = styled.img`
-    display: block;
+    display: flex;
+    max-width: 13rem;
+    width:13vw;
+    min-width: 10rem;
     margin: 0 auto -10px auto;
 `;
 
 const Name = styled.h2`
     margin: 0px;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #15573F;
 `;
 

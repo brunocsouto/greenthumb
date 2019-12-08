@@ -12,3 +12,4 @@ export const thickness = {
     normal: '500',
     bolder: '800'
 }
+

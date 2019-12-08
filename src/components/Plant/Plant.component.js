@@ -17,7 +17,7 @@ import ButtonContainer from '../Button/Button.container';
 const PlantComponent = ({props}) => {
     const path = `/purchase/${props.id}`;
     return (
-        <StyledContainer className="plant-container plant-card">
+        <StyledContainer className="plant-container">
             <Image src={props.url} />
             <Name>{props.name}</Name>
             <DetailsLine>

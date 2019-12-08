@@ -68,7 +68,7 @@ button {
 }
 
 @media (min-width:801px) {
-    body {
+    body{
         overflow: hidden;
     }
 

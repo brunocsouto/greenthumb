@@ -28,6 +28,7 @@ export default class results extends Component {
     }
 
     componentDidMount() {
+        document.body.style.overflow = "auto";
         this.loadPlants();
     }
     
@@ -44,16 +45,17 @@ export default class results extends Component {
 
         return (
             <div className="container-results">
-                <Link className="btn-home" to="/">
-                    <div className="logo">
+                <div className="logo logo-results">
+                    <Link className="btn-home" to="/">
                         <Logo className="logo-image" />
-                    </div>
-                </Link>
+                    </Link>
+                </div>
                 <div className="main main-results">
                     <img src="./assets/illustrations/pick.png" alt="Pick" />
                     <h1>Our picks for you</h1>
                 </div>
                 <div className="plants">{renderPlants}</div>
+                <div className="empty" />
             </div>
         )
     }

@@ -6,9 +6,14 @@ import { ReactComponent as ArrowIcon } from '../../assets/icons/white/arrow.svg'
 
 import { Link } from 'react-router-dom';
 
-
-
 class Start extends Component {
+    componentDidMount(){
+        document.body.style.overflow = "hidden";
+    }
+    
+    componentWillUnmount(){
+        document.body.style.overflow = "auto";
+    }
     render(){
         document.title = "Start quizz - green thumb.";
         return (
