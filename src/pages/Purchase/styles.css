@@ -15,9 +15,75 @@
 
 .plant{
     grid-area: plant;
+    padding: 10vw;
+}
+
+.plant h1{
+    padding: 0;
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+}
+
+.plant h2{
+    color: #d6d6d6;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.plant img{
+    width: 100%;
 }
 
 .form{
     grid-area: form;
     background-color: #f2f2f2;
+    padding:0;
+}
+
+.form h1{
+    padding: 2rem 10vw;
+    font-size: 2rem;
+}
+
+.icon-purchase{
+    width: 100%;
+    color: #6E6E6E;
+    display: flex;
+    align-items: center;
+    margin: .5em;
+}
+
+.icon-purchase .iconPlantList{
+    margin-right: .3em;
+}
+
+.form .description{
+    color: #6E6E6E;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    text-align: start ;
+    padding: 0 10vw;
+}
+
+.form .inputs{
+    margin-top: 1rem;
+    padding: 0 5vw;
+}
+.form input{
+    width: 80vw;
+    padding: 3vw 5vw;
+    border-radius:10rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.form label{
+    font-weight: 700;
+    color: #6E6E6E;
+    padding: 5vw;
+    margin-bottom: 1rem;
+}
+
+.form button{
+    width:90vw;
 }
