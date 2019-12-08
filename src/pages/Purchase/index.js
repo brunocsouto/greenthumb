@@ -71,6 +71,7 @@ export default class Purchase extends Component {
                     </div>
                     <button>send</button>
                 </div>
+                <div className="empty" />
             </div>
         )
     }

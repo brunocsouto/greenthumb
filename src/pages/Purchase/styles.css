@@ -32,12 +32,14 @@
 
 .plant img{
     width: 100%;
+    max-width: 30rem;
 }
 
 .form{
     grid-area: form;
     background-color: #f2f2f2;
     padding:0;
+    padding-bottom: 3rem;
 }
 
 .form h1{
@@ -86,4 +88,88 @@
 
 .form button{
     width:90vw;
+}
+
+@media (min-width:801px){
+    .container-purchase {
+        width:100vw;
+        display: grid;
+        grid-template-areas:'logo plant form empty';
+    }
+    
+    .empty {
+        grid-area: empty;
+        width: 20vw;
+        min-width: 3rem;
+        max-width: 10vw;
+    }
+    
+    .logo-purchase{
+        transform: rotate(-90deg);
+        padding: 0;
+        margin: auto;
+        margin-top: 10rem;
+        width: 20vw;
+        min-width: 8rem;
+        max-width: 10vw;
+    }
+
+        
+    .plant{
+        grid-area: plant;
+        padding: 5rem;
+        padding-right: 0;
+        min-width: 30vw;
+    }
+
+    .plant img{
+        max-width: 15rem;
+    }
+    
+    .form{
+        padding:3rem;
+        width: 20rem;
+        min-width: 20vw;
+        margin-top: 5rem;
+    }
+     
+    .form h1{
+        padding:0;
+    }
+
+    .form .description{
+        padding:1rem 3rem 1rem 0;
+    }
+
+    .form .inputs{
+        padding:0;
+    }
+    .form label{
+        padding: 0;
+    }
+
+    .form button{
+        margin-top: 1rem;
+        width:10rem;
+        float: right;
+        padding:1.3rem;
+        background-color: #fff;
+        color: #15573F;
+        border: 1px solid #15573F;
+        outline: none;
+    }
+    .form button:hover{
+        margin-top: 1rem;
+        width:10rem;
+        float: right;
+        padding:1.3rem;
+        background-color: #15573F;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .form input{
+        width: 80%;
+        padding: 1em 2rem;
+    }
 }
