@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c4d42cf731f1c56b25a64829aafad158",
+    "revision": "cb210e5cf9055c40c8e602c6860b8290",
     "url": "/greenthumb/index.html"
   },
   {
-    "revision": "1f8682ed754dc279c05d",
-    "url": "/greenthumb/static/css/main.bf64ee0a.chunk.css"
+    "revision": "35d0d395305f218e6aef",
+    "url": "/greenthumb/static/css/main.5727e582.chunk.css"
   },
   {
     "revision": "a6b9d78c1831fa6addee",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/greenthumb/static/js/2.9693bc9e.chunk.js.LICENSE"
   },
   {
-    "revision": "1f8682ed754dc279c05d",
-    "url": "/greenthumb/static/js/main.ddc67659.chunk.js"
+    "revision": "35d0d395305f218e6aef",
+    "url": "/greenthumb/static/js/main.db53e640.chunk.js"
   },
   {
     "revision": "cf5e75e2ef1be1699fc7",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "406a33e308598440eb336cbe695f29af",
     "url": "/greenthumb/static/media/one-drop.406a33e3.svg"
+  },
+  {
+    "revision": "9432c085a4f321fab85fd0f4058db8db",
+    "url": "/greenthumb/static/media/pet.9432c085.svg"
   },
   {
     "revision": "e4520626baf69e0e2599088a72c374d2",
