@@ -1,0 +1,23 @@
+.container-purchase {
+    margin: auto;
+    width: 100%;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        'logo'
+        'plant'
+        'form';
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.plant{
+    grid-area: plant;
+}
+
+.form{
+    grid-area: form;
+    background-color: #f2f2f2;
+}
