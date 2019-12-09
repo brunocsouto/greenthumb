@@ -28,7 +28,7 @@ export default function Form() {
             <div className="inputs">
                 <h1>Thank you!</h1>
                 <div className="description">You will hear from us soon. Please check your e-mail.</div>
-                <img src="../../assets/illustrations/envelop.png" alt="envelop" />
+                <img src="./assets/illustrations/envelop.png" alt="envelop" />
             </div>
         )
     }else{
