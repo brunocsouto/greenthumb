@@ -4,6 +4,7 @@ import './styles.css';
 
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
+import Form from '../../components/Form/index';
 
 import { Icon } from '../../components/Plant/Plant.styles';
 import { ReactComponent as ToxicIcon } from '../../assets/icons/grey/toxic.svg';
@@ -36,7 +37,6 @@ export default class Purchase extends Component {
     loadPlant = async ({ id }) => {
         await api.get(`plant?id=${id}`)
             .then((res) => {
-                console.log(res)
                 const {data} = res;
                 this.setState({data});
             })
@@ -46,7 +46,7 @@ export default class Purchase extends Component {
     }
 
     render(){
-        const {data} = this.state;
+        const {data, id} = this.state;
         return (
             <div className="container-purchase">
                 <div className="logo logo-purchase">
@@ -61,15 +61,7 @@ export default class Purchase extends Component {
                     {FilterIcons(data)}
                 </div>
                 <div className="form">
-                    <h1>Nice pick!</h1>
-                    <div className="description">Tell us your name and e-mail and we will get in touch about your order :)</div>
-                    <div className="inputs">
-                        <label>Name</label>
-                        <input type="text" placeholder="Crazy Plant Person" />
-                        <label>E-mail</label>
-                        <input type="text" placeholder="plantperson@email.com" />
-                    </div>
-                    <button>send</button>
+                    <Form id={id} />
                 </div>
                 <div className="empty" />
             </div>
@@ -78,12 +70,12 @@ export default class Purchase extends Component {
 };
 
 const FilterIcons = (props) => { 
-    console.log(props)
     let imgToxic = '';
     if(props.toxicity){
         imgToxic = (
             <Icon className="icon-purchase">
                 <ToxicIcon className="iconPlantList" />
+                    <span>Toxic for pets</span>
             </Icon>
         );
     }else{

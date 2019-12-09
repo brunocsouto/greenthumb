@@ -1,4 +1,209 @@
-.container-purchase {
+.container-purchase{
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        'logo'
+        'plant'
+        'form';
+}
+
+.plant{
+    grid-area: plant;
+}
+
+.logo{grid-area: logo;}
+
+.logo.logo-purchase{
+    min-width: 0;
+    padding: 0;
+}
+
+.plant h1{
+    padding: 0 2rem;
+}
+.plant h2{
+    color: #d6d6d6;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 2rem;
+}
+.plant img{
+    padding: 0 2rem;
+}
+.plant .icon-purchase{
+    padding: 0.2rem 0;
+}
+
+.plant .specs{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    color: #6E6E6E;
+}
+
+.plant .icon-purchase{
+    display: flex;
+    align-items: center;
+}
+
+.plant .iconPlantList{
+    padding: 0.3rem;
+}
+
+.form{
+    grid-area: form;
+    background-color: #f2f2f2;
+}
+.form .description{
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+}
+.form h1{
+    font-size: 2.3rem;
+}
+.form label{
+    font-weight: 700;
+    color: #6E6E6E;
+}
+.form input{
+    border-radius:10rem;
+    margin: 0.2rem 0;
+    outline: none;
+}
+
+
+@media(min-width:801px){
+    .container-purchase {
+        width:100vw;
+        display: grid;
+        grid-template-areas:'logo plant form empty';
+        padding-top: 5rem;
+    }
+    
+    .empty{
+        grid-area: empty;
+    }
+
+    .logo{
+        width: 10vw;
+    }
+    .logo.logo-purchase{
+        transform: rotate(-90deg);
+        margin: auto;
+        margin-top: 5em;
+    }
+    .plant{
+        width: 40vw;
+    }
+    .plant .h1{
+        padding: 0 5rem;
+    }
+    .plant .h2{
+        padding: 0 5rem;
+    }
+
+    .form{
+        width: 30vw;
+    }
+    .form h1{
+        padding-bottom: 1rem;
+    }
+    .form label{
+        padding: 2rem;
+    }
+    .form input{
+        width: 70%;
+        margin-left: 10%;
+        padding: .5rem 1rem;
+    }
+
+    
+    .form input[type=submit]{
+        margin-top: 1rem;
+        width:7rem;
+        float: right;
+        padding:0.9rem;
+        margin-right: 10%;
+        background-color: #fff;
+        color: #15573F;
+        border: 1px solid #15573F;
+        outline: none;
+    }
+    .form input[type=submit]:hover{
+        background-color: #15573F;
+        color: #fff;
+        cursor: pointer;
+    }
+    .form img{
+        display: flex;
+        width:12rem;
+        margin: auto;
+    }
+}
+
+@media(max-width:800px){
+        
+    .plant img{
+        display: flex;
+        margin: auto;
+    }
+    
+    .plant h1{
+        padding: 0 10vw;
+    }
+    .plant h2{
+        padding: 0 10vw;
+    }
+    .plant img{
+        padding: 0 10vw;
+    }
+    .plant .icon-purchase{
+        padding: 0.2rem 0;
+    }
+
+    .plant .specs{
+        padding: 0 10vw;
+    }
+    
+    .plant{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .form .description{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .form label{
+        padding: 5vw 10vw;
+    }
+    
+    .form input[type=submit]{
+        width:90vw;
+        margin: 1rem 5vw 2rem 5vw;
+        padding: 4vw 5vw;
+        background-color: #15573F;
+        color: #fff;
+        outline: none;
+    }
+
+    .form input[type=text]{
+        width: 80vw;
+        margin: 0 5vw 0 5vw;
+        padding: 4vw 5vw;
+    }
+
+    
+    .form img{
+        width:60vw;
+        margin: 0 20vw 3rem 20vw;
+    }
+}
+/* .container-purchase {
     margin: auto;
     width: 100%;
     width: 100vw;
@@ -31,8 +236,7 @@
 }
 
 .plant img{
-    width: 100%;
-    max-width: 30rem;
+    max-width: 25rem;
 }
 
 .form{
@@ -43,8 +247,8 @@
 }
 
 .form h1{
-    padding: 2rem 10vw;
     font-size: 2rem;
+    padding: 0;
 }
 
 .icon-purchase{
@@ -64,15 +268,13 @@
     font-size: 1.1rem;
     line-height: 1.6rem;
     text-align: start ;
-    padding: 0 10vw;
 }
 
 .form .inputs{
     margin-top: 1rem;
-    padding: 0 5vw;
 }
 .form input{
-    width: 80vw;
+    width: 70vw;
     padding: 3vw 5vw;
     border-radius:10rem;
     margin-bottom: 1rem;
@@ -117,9 +319,9 @@
         
     .plant{
         grid-area: plant;
-        padding: 5rem;
-        padding-right: 0;
-        min-width: 30vw;
+        padding: 0 0.5rem 0 5rem;
+        margin-top: 5rem;
+        min-width: 20rem;
     }
 
     .plant img{
@@ -144,11 +346,15 @@
     .form .inputs{
         padding:0;
     }
+
+    .form input{
+        margin-bottom: 0;
+    }
     .form label{
         padding: 0;
     }
 
-    .form button{
+    .form input[type=submit]{
         margin-top: 1rem;
         width:10rem;
         float: right;
@@ -158,7 +364,7 @@
         border: 1px solid #15573F;
         outline: none;
     }
-    .form button:hover{
+    .form input[type=submit]:hover{
         margin-top: 1rem;
         width:10rem;
         float: right;
@@ -172,4 +378,5 @@
         width: 80%;
         padding: 1em 2rem;
     }
-}
+
+} */

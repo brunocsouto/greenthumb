@@ -1,0 +1,27 @@
+form .error::placeholder{
+    color: red;
+}
+
+form input.error{
+    border: 1px solid red;
+    color: red;
+}
+
+form label.error{
+    color: red;
+}
+
+form span{
+    visibility: hidden;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+    color: red;
+}
+
+form span.error{
+    visibility: visible;
+}
+
+form img{
+    margin: auto;
+}
