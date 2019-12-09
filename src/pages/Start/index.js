@@ -25,7 +25,7 @@ class Start extends Component {
                     <h1 className="title">Find your next green friend</h1>
                     <Link to="/quiz">
                         <button id="btn-start">
-                            <ArrowIcon className="arrow" stroke="#FFF"/>
+                            <ArrowIcon className="arrow" stroke="#000"/>
                             <div className="label-button">start quizz</div>
                         </button>
                 </Link>

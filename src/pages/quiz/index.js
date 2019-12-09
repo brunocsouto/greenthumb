@@ -3,6 +3,14 @@ import './styles.css'
 
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
+import { ReactComponent as ArrowIcon } from '../../assets/icons/white/arrow.svg';
+import { ReactComponent as HighSunIcon } from '../../assets/icons/coral/high-sun.svg';
+import { ReactComponent as LowSunIcon } from '../../assets/icons/coral/low-sun.svg';
+import { ReactComponent as NoAnwswerIcon } from '../../assets/icons/coral/no-answer.svg';
+import { ReactComponent as OneDropIcon } from '../../assets/icons/grey/one-drop.svg';
+import { ReactComponent as TwoDropsIcon } from '../../assets/icons/grey/two-drops.svg';
+import { ReactComponent as ThreeDropsIcon } from '../../assets/icons/grey/three-drops.svg';
+import { ReactComponent as PetIcon } from '../../assets/icons/grey/pet.svg';
 
 
 export default class Quiz extends Component {
@@ -15,7 +23,7 @@ export default class Quiz extends Component {
                     index: 1,
                     img: './assets/illustrations/sun.png',
                     options: [
-                        { value:'high', label: 'High Sunlight'},
+                        { value:'high', label: 'High Sunlight' },
                         { value:'low', label: 'Low Sunlight'},
                         { value:'no', label: 'No Sunlight'},
                     ],
@@ -112,6 +120,7 @@ export default class Quiz extends Component {
                     <div className="navigation">
                         <Link to="/">
                             <div className="buttonPrev" >
+                                <ArrowIcon className="arrow-prev" />
                                 home
                             </div>
                         </Link>
@@ -119,6 +128,7 @@ export default class Quiz extends Component {
                             className="buttonNext"
                             onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
                         >
+                            <ArrowIcon />
                             next
                         </div>
                     </div>
@@ -131,12 +141,14 @@ export default class Quiz extends Component {
                             className="buttonPrev"
                             onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
                         >
+                            <ArrowIcon className="arrow-prev" />
                             prev
                         </div>
                         <div 
                             className="buttonNext"
                             onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
                         >
+                            <ArrowIcon className="arrow-next" />
                             next
                         </div>
                     </div>
@@ -154,6 +166,7 @@ export default class Quiz extends Component {
                             className="buttonPrev"
                             onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
                         >
+                            <ArrowIcon className="arrow-prev" />
                             prev
                         </div>
                         <Link to={path}>
@@ -161,7 +174,8 @@ export default class Quiz extends Component {
                                 className="buttonNext"
                                 onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
                             >
-                                        finish
+                                <ArrowIcon className="arrow-next" />
+                                finish
                             </div>
                         </Link>
                     </div>
@@ -172,6 +186,7 @@ export default class Quiz extends Component {
                     <div className="navigation">
                         <Link to="/">
                             <div className="buttonPrev" >
+                                <ArrowIcon className="arrow-prev" />
                                 home
                             </div>
                         </Link>
@@ -179,6 +194,7 @@ export default class Quiz extends Component {
                             className="buttonNext"
                             onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
                         >
+                            <ArrowIcon className="arrow-next" />
                             next
                         </div>
                     </div>
@@ -274,7 +290,31 @@ const Question = ({ handleOptionChange, question }) => {
 
 const Option = ({ handleOptionChange, label, selected, value, question }) => {
     const classNameSelected = (selected === value) ? `optionButton selected option-${question}`: `optionButton option-${question}` ;
+    const Icon = () => {
+        switch(question){
+            case 'sun':{
+                switch(value){
+                    case 'high': return <HighSunIcon />;
+                    case 'low': return <LowSunIcon />
+                    default: return <NoAnwswerIcon />
+                }
+            }
+            case 'water':{
+                switch(value){
+                    case 'daily': return <ThreeDropsIcon />
+                    case 'regularly': return <TwoDropsIcon />
+                    default: return <OneDropIcon />
+                }
+            }
+            default:{
+                return (value === 'true') ? <PetIcon /> : <NoAnwswerIcon />;
+            }
+        }
+    }
     return(
-        <div className={classNameSelected} onClick={handleOptionChange.bind(this, value)}>{label}</div>
+        <div className={classNameSelected} onClick={handleOptionChange.bind(this, value)}>
+            <div className="option-icon"><Icon /></div>
+            <div className="option-label">{label}</div>
+        </div>
     )
 }

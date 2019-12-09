@@ -55,6 +55,10 @@
     box-shadow: 0px 21px 68px -14px rgba(110,110,110,0.71);
 }
 
+.optionButton:hover g{
+    fill: #fff;
+}
+
 p{
     color: #6E6E6E;
     font-weight: 500;
@@ -70,6 +74,8 @@ p{
     color: #15573F;
     border: 1px solid #15573F;
     grid-area: prev;
+    display: flex;
+    justify-content: space-around;
 }
 
 .buttonNext {
@@ -80,6 +86,15 @@ p{
     color: #fff;
     background-color: #15573F;
     grid-area: next;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonPrev path{
+    stroke: #15573F;
+}
+.buttonNext path{
+    stroke: #15573F;
 }
 
 .selected.option-sun{
@@ -87,8 +102,8 @@ p{
     color: #fff;
     font-weight: 700;
     -webkit-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
--moz-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
+    -moz-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
+    box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
 }
 
 .selected.option-pets{
@@ -96,8 +111,8 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
     color: #fff;
     font-weight: 700;
     -webkit-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
--moz-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
+    -moz-box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
+    box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
 }
         
 .selected.option-water{
@@ -106,6 +121,23 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
     -webkit-box-shadow: 1px 2px 9px -1px rgba(123,175,158,1);
     -moz-box-shadow: 1px 2px 9px -1px rgba(123,175,158,1);
     box-shadow: 1px 2px 9px -1px rgba(123,175,158,1);
+}
+
+.option-pets g{
+    fill: #FD9872;
+}
+
+.option-water g{
+    fill: #7BAF9E;
+}
+
+.arrow-prev{
+    transform: rotate(180deg);
+}
+
+
+.selected g{
+    fill: #fff;
 }
 
 @media (min-width: 801px){
@@ -138,6 +170,10 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
         width: 9rem;
         height: 8rem;
         font-size: .9rem;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     .optionButton:hover{
@@ -149,6 +185,7 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
     .optionButton, .buttonNext, .buttonPrev:hover{
         cursor: pointer;
     }
+    
 
     .logo-quiz{
         transform: rotate(-90deg);
@@ -186,6 +223,9 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
         background-color: #15573F;
         color: #fff;
     }
+    .buttonPrev:hover path{
+        stroke: #fff;
+    }
 
     .buttonNext{
         background-color: #fff;
@@ -196,6 +236,17 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
     .buttonNext:hover{
         background-color: #15573F;
         color: #fff;
+    }
+    .buttonNext:hover path{
+        stroke: #fff;
+    }
+
+    .option-label{
+        width: 100%;
+    }
+    .option-icon svg{
+        width:4rem;
+        height: 4rem;
     }
     
 }
@@ -215,5 +266,24 @@ box-shadow: 0px 21px 27px -22px rgba(253,152,114,1);
 
     .buttonPrev{
         margin: 1rem;
+    }
+    
+    .buttonNext path{
+        stroke: #fff;
+    }
+
+    .optionButton{
+        display: flex;
+        height: 3rem;
+    }
+    .option-label{
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+    .option-icon svg{
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
     }
 }
