@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/greenthumb/static/css/main.898fbd74.chunk.css",
-    "main.js": "/greenthumb/static/js/main.9cd228cc.chunk.js",
-    "main.js.map": "/greenthumb/static/js/main.9cd228cc.chunk.js.map",
+    "main.css": "/greenthumb/static/css/main.a51cbd0f.chunk.css",
+    "main.js": "/greenthumb/static/js/main.56aa022f.chunk.js",
+    "main.js.map": "/greenthumb/static/js/main.56aa022f.chunk.js.map",
     "runtime-main.js": "/greenthumb/static/js/runtime-main.d776a3ea.js",
     "runtime-main.js.map": "/greenthumb/static/js/runtime-main.d776a3ea.js.map",
     "static/js/2.a743b349.chunk.js": "/greenthumb/static/js/2.a743b349.chunk.js",
     "static/js/2.a743b349.chunk.js.map": "/greenthumb/static/js/2.a743b349.chunk.js.map",
     "index.html": "/greenthumb/index.html",
-    "precache-manifest.ca58f9d690b76a56393f433423655609.js": "/greenthumb/precache-manifest.ca58f9d690b76a56393f433423655609.js",
+    "precache-manifest.4a61bc76488fe7991fea10b1e050928e.js": "/greenthumb/precache-manifest.4a61bc76488fe7991fea10b1e050928e.js",
     "service-worker.js": "/greenthumb/service-worker.js",
-    "static/css/main.898fbd74.chunk.css.map": "/greenthumb/static/css/main.898fbd74.chunk.css.map",
+    "static/css/main.a51cbd0f.chunk.css.map": "/greenthumb/static/css/main.a51cbd0f.chunk.css.map",
     "static/js/2.a743b349.chunk.js.LICENSE": "/greenthumb/static/js/2.a743b349.chunk.js.LICENSE",
     "static/media/arrow.2783f801.svg": "/greenthumb/static/media/arrow.2783f801.svg",
+    "static/media/high-sun.5501cc39.svg": "/greenthumb/static/media/high-sun.5501cc39.svg",
     "static/media/high-sun.ffabbf0e.svg": "/greenthumb/static/media/high-sun.ffabbf0e.svg",
     "static/media/logo-greenthumb.b90b894c.svg": "/greenthumb/static/media/logo-greenthumb.b90b894c.svg",
+    "static/media/low-sun.833e7ed9.svg": "/greenthumb/static/media/low-sun.833e7ed9.svg",
     "static/media/low-sun.e0a3c2ee.svg": "/greenthumb/static/media/low-sun.e0a3c2ee.svg",
     "static/media/no-answer.b0a2400e.svg": "/greenthumb/static/media/no-answer.b0a2400e.svg",
+    "static/media/no-answer.c0655b97.svg": "/greenthumb/static/media/no-answer.c0655b97.svg",
     "static/media/one-drop.406a33e3.svg": "/greenthumb/static/media/one-drop.406a33e3.svg",
     "static/media/pet.9432c085.svg": "/greenthumb/static/media/pet.9432c085.svg",
     "static/media/three-drops.e4520626.svg": "/greenthumb/static/media/three-drops.e4520626.svg",
@@ -26,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.d776a3ea.js",
     "static/js/2.a743b349.chunk.js",
-    "static/css/main.898fbd74.chunk.css",
-    "static/js/main.9cd228cc.chunk.js"
+    "static/css/main.a51cbd0f.chunk.css",
+    "static/js/main.56aa022f.chunk.js"
   ]
 }
