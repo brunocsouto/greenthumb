@@ -8,10 +8,10 @@ import {
   Route
 } from 'react-router-dom';
 
-import Start from './pages/Start';
+import Start from './pages/start';
 import Quiz from './pages/quiz';
 import Result from './pages/results';
-import Purchase from './pages/Purchase';
+import Contact from './pages/contact';
 
 
 
@@ -24,7 +24,7 @@ const App = () => {
           <Route exact path="/" component={Start} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/results" component={Result} />
-          <Route exact path="/purchase/:id" component={Purchase} />
+          <Route exact path="/contact/:id" component={Contact} />
         </Switch>
       </Router>
     </div>

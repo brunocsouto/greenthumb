@@ -15,7 +15,7 @@ import { ReactComponent as NoIcon } from '../../assets/icons/grey/no-answer.svg'
 import ButtonContainer from '../Button/Button.container';
 
 const PlantComponent = ({props}) => {
-    const path = `/purchase/${props.id}`;
+    const path = `/contact/${props.id}`;
     return (
         <StyledContainer className="plant-container">
             <Image src={props.url} />

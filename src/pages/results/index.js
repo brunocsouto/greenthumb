@@ -7,7 +7,7 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
 
-export default class results extends Component {
+export default class Results extends Component {
     constructor() {
         super();
         this.state = {
@@ -28,13 +28,14 @@ export default class results extends Component {
     }
 
     componentDidMount() {
-        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "auto";
         this.loadPlants();
     }
     
     
 
     render() {
+        document.title = "Results - green thumb.";
         const { plants } = this.state;
 
         const renderPlants = (

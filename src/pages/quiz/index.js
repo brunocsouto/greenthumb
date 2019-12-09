@@ -156,30 +156,48 @@ export default class Quiz extends Component {
             }
             case 3: {
                 const {questions} = this.state;
-                let path="/results"
                 if(questions[1].selected && questions[2].selected && questions[3].selected){
+                    let path="/results"
                     path += `?sun=${questions[1].selected}&water=${questions[2].selected}&pets=${questions[3].selected}`;
-                }
-                return (
-                    <div className="navigation">
-                        <div 
-                            className="buttonPrev"
-                            onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
-                        >
-                            <ArrowIcon className="arrow-prev" />
-                            prev
+                    return (
+                        <div className="navigation">
+                            <div 
+                                className="buttonPrev"
+                                onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
+                            >
+                                <ArrowIcon className="arrow-prev" />
+                                prev
+                            </div>
+                            <Link to={path}>
+                                <div 
+                                    className="buttonNext"
+                                    onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
+                                >
+                                    <ArrowIcon className="arrow-next" />
+                                    finish
+                                </div>
+                            </Link>
                         </div>
-                        <Link to={path}>
+                    );
+                }else{
+                    return (
+                        <div className="navigation">
+                            <div 
+                                className="buttonPrev"
+                                onClick={this.handleQuestionChange.bind(this, [current, 'prev'])}
+                            >
+                                <ArrowIcon className="arrow-prev" />
+                                prev
+                            </div>
                             <div 
                                 className="buttonNext"
-                                onClick={this.handleQuestionChange.bind(this, [current, 'next'])}
                             >
                                 <ArrowIcon className="arrow-next" />
                                 finish
                             </div>
-                        </Link>
-                    </div>
-                );
+                        </div>
+                    );
+                }
             }
             default: {
                 return (

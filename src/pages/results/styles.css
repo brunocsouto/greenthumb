@@ -78,6 +78,10 @@ h1{
         flex-wrap: wrap;
         padding: 3rem;
     }
+
+    .plants{
+        width:80vw;
+    }
 }
 
 @media (max-width: 800px){

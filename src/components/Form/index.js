@@ -50,7 +50,7 @@ export default function Form() {
                             })
                         } 
                     />
-                    <span className={nameError}>The name is required.</span>
+                    <span className={nameError}>Full name is required.</span>
                     <br />
                     <label className={emailError}>E-mail</label>
                     <input 

@@ -17,7 +17,7 @@ import { ReactComponent as ThreeWaterIcon } from '../../assets/icons/grey/three-
 import { ReactComponent as NoIcon } from '../../assets/icons/grey/no-answer.svg';
 
 
-export default class Purchase extends Component {
+export default class Contact extends Component {
     constructor(){
         super();
         this.state = {
@@ -46,6 +46,7 @@ export default class Purchase extends Component {
     }
 
     render(){
+        document.title = "Contact - green thumb.";
         const {data, id} = this.state;
         return (
             <div className="container-purchase">
