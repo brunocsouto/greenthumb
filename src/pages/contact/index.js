@@ -5,16 +5,7 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
 import Form from '../../components/Form/index';
-
-import { Icon } from '../../components/Plant/Plant.styles';
-import { ReactComponent as ToxicIcon } from '../../assets/icons/grey/toxic.svg';
-import { ReactComponent as PetIcon } from '../../assets/icons/grey/pet.svg';
-import { ReactComponent as HighSunIcon } from '../../assets/icons/grey/high-sun.svg';
-import { ReactComponent as LowSunIcon } from '../../assets/icons/grey/low-sun.svg';
-import { ReactComponent as OneWaterIcon } from '../../assets/icons/grey/one-drop.svg';
-import { ReactComponent as TwoWaterIcon } from '../../assets/icons/grey/two-drops.svg';
-import { ReactComponent as ThreeWaterIcon } from '../../assets/icons/grey/three-drops.svg';
-import { ReactComponent as NoIcon } from '../../assets/icons/grey/no-answer.svg';
+import ContactIcons from '../../components/ContactIcons';
 
 
 export default class Contact extends Component {
@@ -36,14 +27,14 @@ export default class Contact extends Component {
     
     loadPlant = async ({ id }) => {
         await api.get(`plant?id=${id}`)
-            .then((res) => {
-                const {data} = res;
+            .then((response) => {
+                const {data} = response;
                 this.setState({data});
             })
-            .catch((err) => {
-                console.log(err);
+            .catch((error) => {
+                console.log(`Error: ${error.response.data.status} - ${error.response.data.error}`);
             })
-    }
+    } 
 
     render(){
         document.title = "Contact - green thumb.";
@@ -59,7 +50,9 @@ export default class Contact extends Component {
                     <h1>{data.name}</h1>
                     <h2>${data.price}</h2>
                     <img src={data.url} alt={data.name} />
-                    {FilterIcons(data)}
+                    <div className="specs">
+                        <ContactIcons className="icon-purchase" data={data} />
+                    </div>
                 </div>
                 <div className="form">
                     <Form id={id} />
@@ -68,101 +61,4 @@ export default class Contact extends Component {
             </div>
         )
     }
-};
-
-const FilterIcons = (props) => { 
-    let imgToxic = '';
-    if(props.toxicity){
-        imgToxic = (
-            <Icon className="icon-purchase">
-                <ToxicIcon className="iconPlantList" />
-                    <span>Toxic for pets</span>
-            </Icon>
-        );
-    }else{
-        imgToxic = (
-            <Icon className="icon-purchase">
-                <PetIcon className="iconPlantList" />
-                    <span>Non-toxic for pets</span>
-            </Icon>
-        );
-    };
-    let imgSun = '';
-    switch(props.sun){
-        case 'high':{
-            imgSun = (
-                <Icon className="icon-purchase">
-                    <HighSunIcon className="iconPlantList" />
-                    <span>High Sunlight</span>
-                </Icon>
-            );
-            break;
-        }
-        case 'low':{
-            imgSun = (
-                <Icon className="icon-purchase">
-                    <LowSunIcon className="iconPlantList" />
-                <span>Low Sunlight</span>
-                </Icon>
-            );
-            break;
-        }
-        default: {
-            imgSun = (
-                <Icon className="icon-purchase">
-                    <NoIcon className="iconPlantList" />
-                    <span>No Sunlight</span>
-                </Icon>
-            );
-            break;
-        }
-    }
-
-    let imgWater = '';
-    switch(props.water){
-        case 'daily':{
-            imgWater = (
-                <Icon className="icon-purchase">
-                    <ThreeWaterIcon className="iconPlantList" />
-                    <span>Water daily</span>
-                </Icon>
-            );
-            break;
-        }
-        case 'regularly':{
-            imgWater = (
-                <Icon className="icon-purchase">
-                    <TwoWaterIcon className="iconPlantList" />
-                    <span>Water regularly</span>
-                </Icon>
-            );
-            break;
-        }
-        case 'rarely':{
-            imgWater = (
-                <Icon className="icon-purchase">
-                    <OneWaterIcon className="iconPlantList" />
-                    <span>Water rarely</span>
-                </Icon>
-                );
-            break;
-        }
-        default:{
-            imgWater = (
-                <Icon className="icon-purchase">
-                    <OneWaterIcon className="iconPlantList" />
-                    <span>Water rarely</span>
-                </Icon>
-                );
-            break;
-        }
-    }
-
-    return (
-        <div className="specs">
-            {imgSun}           
-            {imgWater}
-            {imgToxic}
-        </div>
-    );
 };

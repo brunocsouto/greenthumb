@@ -81,7 +81,7 @@ export default function Form() {
                 setStatus(response);
             })
             .catch(error => {
-                console.log(error);
+                console.log(`Error: ${error.response.data.status} - ${error.response.data.error}`);
             })
     }
 

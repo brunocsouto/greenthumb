@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import queryString from 'query-string';
-import PlantComponent from '../../components/Plant/Plant.component';
 
 import './styles.css';
 import { Link } from 'react-router-dom';
+import Plants from '../../components/Plants';
 import { ReactComponent as Logo } from '../../assets/logo/logo-greenthumb.svg';
 
 export default class Results extends Component {
@@ -32,17 +32,10 @@ export default class Results extends Component {
         this.loadPlants();
     }
     
-    
 
     render() {
         document.title = "Results - green thumb.";
         const { plants } = this.state;
-
-        const renderPlants = (
-            <section className="plant-group">
-                <Plants plants={plants} />
-            </section>
-        )
 
         return (
             <div className="container-results">
@@ -52,22 +45,16 @@ export default class Results extends Component {
                     </Link>
                 </div>
                 <div className="main main-results">
-                    <img src="./assets/illustrations/pick.png" alt="Pick" />
+                    <img src={process.env.PUBLIC_URL + "/assets/illustrations/pick.png"} alt="Pick" />
                     <h1>Our picks for you</h1>
                 </div>
-                <div className="plants">{renderPlants}</div>
+                <div className="plants">
+                    <section className="plant-group">
+                        <Plants plants={plants} />
+                    </section>
+                </div>
                 <div className="empty" />
             </div>
         )
     }
-}
-
-const Plants =  ({plants}) => {
-    return (
-        <>
-            {plants.map(plant => (
-                <PlantComponent props={plant} key={plant.id}/>
-            ))}  
-        </>
-    )
 }

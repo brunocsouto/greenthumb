@@ -66,7 +66,19 @@ p{
     padding: 0 1rem 1.6rem 1rem;
 }
 
-.buttonPrev {
+            .buttonPrev {
+                width: 7rem;
+                text-align: center;
+                border-radius: 3rem;
+                padding: 1rem;
+                color: #15573F;
+                border: 1px solid #15573F;
+                grid-area: prev;
+                display: flex;
+                justify-content: space-around;
+            }
+
+.button-prev {
     width: 7rem;
     text-align: center;
     border-radius: 3rem;
@@ -78,7 +90,19 @@ p{
     justify-content: space-around;
 }
 
-.buttonNext {
+                .buttonNext {
+                    width: 7rem;
+                    text-align: center;
+                    border-radius: 3rem;
+                    padding: 1rem;
+                    color: #fff;
+                    background-color: #15573F;
+                    grid-area: next;
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+.button-next {
     width: 7rem;
     text-align: center;
     border-radius: 3rem;
@@ -90,10 +114,17 @@ p{
     justify-content: space-around;
 }
 
-.buttonPrev path{
+            .buttonPrev path{
+                stroke: #15573F;
+            }
+.button-prev path{
     stroke: #15573F;
 }
-.buttonNext path{
+
+            .buttonNext path{
+                stroke: #15573F;
+            }
+.button-next path{
     stroke: #15573F;
 }
 
@@ -182,10 +213,13 @@ p{
         background-color: #FD9872;
     }
 
-    .optionButton, .buttonNext, .buttonPrev:hover{
+                .optionButton, .buttonNext, .buttonPrev:hover{
+                    cursor: pointer;
+                }
+    
+    .optionButton, .button-next, .button-prev:hover{
         cursor: pointer;
     }
-    
 
     .logo-quiz{
         transform: rotate(-90deg);
@@ -219,25 +253,47 @@ p{
         grid-template-areas:
         'prev next';
     }
-    .buttonPrev:hover{
+                .buttonPrev:hover{
+                    background-color: #15573F;
+                    color: #fff;
+                }
+                .buttonPrev:hover path{
+                    stroke: #fff;
+                }    
+    
+    .button-prev:hover{
         background-color: #15573F;
         color: #fff;
     }
-    .buttonPrev:hover path{
+    .button-prev:hover path{
         stroke: #fff;
     }
 
-    .buttonNext{
+                .buttonNext{
+                    background-color: #fff;
+                    color: #15573F;
+                    border: 1px solid #15573F;
+                }
+
+                .buttonNext:hover{
+                    background-color: #15573F;
+                    color: #fff;
+                }
+                .buttonNext:hover path{
+                    stroke: #fff;
+                }
+
+    .button-next{
         background-color: #fff;
         color: #15573F;
         border: 1px solid #15573F;
     }
 
-    .buttonNext:hover{
+    .button-next:hover{
         background-color: #15573F;
         color: #fff;
     }
-    .buttonNext:hover path{
+    .button-next:hover path{
         stroke: #fff;
     }
 
@@ -260,15 +316,25 @@ p{
             'prev';
     }
     
-    .buttonNext{
+                .buttonNext{
+                    margin: 1rem;
+                }
+    .button-next{
         margin: 1rem;
     }
 
-    .buttonPrev{
+                .buttonPrev{
+                    margin: 1rem;
+                }
+
+    .button-prev{
         margin: 1rem;
     }
     
-    .buttonNext path{
+                .buttonNext path{
+                    stroke: #fff;
+                }
+    .button-next path{
         stroke: #fff;
     }
 
