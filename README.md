@@ -9,11 +9,13 @@ Some features used in this project:
 - Babel
 - Git
 
+
 Installation:
 
 ### `yarn`
 or
 ### `npm install`
+
 
 You also need to have react-scripts installed
 
@@ -21,17 +23,21 @@ You also need to have react-scripts installed
 or
 ### `npm install react-scripts`
 
-Then oy can run the project:
+
+Then you can run the project:
 
 ### `yarn start`
 or
 ### `npm run start`
+
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+
 
 
 Thanks to the recruiting team, I was so exciting doing it and I learned a lot!
