@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1389ed0c12f33853142289239abf5f79",
+    "revision": "6e3ef3deca372b296a215f7fb47984c4",
     "url": "/greenthumb/index.html"
   },
   {
-    "revision": "3a6d014fca3204230b8c",
+    "revision": "cd48158471595c4b01a9",
     "url": "/greenthumb/static/css/main.4e7af301.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/greenthumb/static/js/2.d1d4d871.chunk.js.LICENSE"
   },
   {
-    "revision": "3a6d014fca3204230b8c",
-    "url": "/greenthumb/static/js/main.e6d4caa8.chunk.js"
+    "revision": "cd48158471595c4b01a9",
+    "url": "/greenthumb/static/js/main.0313ebfa.chunk.js"
   },
   {
     "revision": "cf5e75e2ef1be1699fc7",
